@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .calculator-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Loan Calculator</h2>
+        <div class="form-group">
+            <label for="principal">Loan Amount:</label>
+            <input type="number" id="principal" placeholder="Enter loan amount">
+        </div>
+        <div class="form-group">
+            <label for="annualRate">Annual Interest Rate (%):</label>
+            <input type="number" id="annualRate" placeholder="Enter annual interest rate">
+        </div>
+        <div class="form-group">
+            <label for="years">Loan Term (years):</label>
+            <input type="number" id="years" placeholder="Enter loan term in years">
+        </div>
+        <button onclick="calculateLoan()">Calculate</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
